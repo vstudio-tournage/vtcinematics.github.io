@@ -3,13 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nous Contacter - VStudio</title>
+    <title>Contact & Devis - VTCinematics</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style ultra-stylisé pour le formulaire et le bouton de devis */
+        .contact-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+        .contact-container h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            letter-spacing: 0.5px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ddd;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #262626;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 15px;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ffffff;
+        }
+        /* Bouton stylisé */
+        .btn-devis-stylise {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #ffffff, #dcdcdc);
+            color: #000000;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-devis-stylise:hover {
+            background: linear-gradient(135deg, #e6e6e6, #ffffff);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">VStudio</a>
+        <a href="index.html" class="logo">VTCinematics</a>
         <nav>
             <ul>
                 <li><a href="prestations.html">Mes Prestations</a></li>
@@ -21,53 +87,27 @@
 
     <main>
         <div class="contact-container">
-            <form action="https://formspree.io/f/mgaedynz" method="POST">
-                <div class="form-group-row">
-                    <div class="form-group">
-                        <label for="prenom">Prénom *</label>
-                        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="nom">Nom *</label>
-                        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
-                    </div>
-                </div>
-
+            <h1>Demande de Devis</h1>
+            <form action="#" method="POST">
                 <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>
+                    <label for="nom">Nom / Entreprise</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom ou celui de votre structure" required>
                 </div>
-
                 <div class="form-group">
-                    <label for="telephone">Numéro de téléphone *</label>
-                    <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required>
+                    <label for="email">Adresse Email</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
                 </div>
-
                 <div class="form-group">
-                    <label for="evenement">Type d'événement *</label>
-                    <select id="evenement" name="evenement" required>
-                        <option value="Mariage">Mariage</option>
-                        <option value="Gala">Gala</option>
-                        <option value="Séminaire">Séminaire</option>
-                        <option value="Défilé">Défilé</option>
-                        <option value="Entreprise">Vidéo d'Entreprise</option>
-                        <option value="Création Digital">Création Digital (TikTok, Twitch...)</option>
-                        <option value="Autre">Autre</option>
-                    </select>
+                    <label for="message">Votre Projet / Détails</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Décrivez vos besoins, vos dates ou vos formats..." required></textarea>
                 </div>
-
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Envoyer</button>
+                <button type="submit" class="btn-devis-stylise">Envoyer ma demande</button>
             </form>
         </div>
     </main>
 
     <footer>
-        &copy; VStudio - Tous droits réservés.
+        &copy; VTCinematics - Tous droits réservés.
     </footer>
 
 </body>
